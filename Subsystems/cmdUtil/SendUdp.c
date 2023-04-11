@@ -94,7 +94,7 @@ int SendUdp(char *hostname, char *portNum, unsigned char *packetData, int packet
     }
 
     getnameinfo(rp->ai_addr, rp->ai_addrlen, hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST);
-    printf("sending data to '%s' (IP : %s); port %d\n", rp->ai_canonname, hbuf, port);
+    printf("sending data '%s' (IP : %s); port %d\n", rp->ai_canonname, hbuf, port);
 
     freeaddrinfo(result);
 
